@@ -76,7 +76,10 @@ public:
         //membuat prosedur diplay untuk menampilkan element queue
         void display() {
             //cek apakah antrian kosong 
-            if (FRONT == -1)
+            int FRONT_Position = FRONT;
+            int REAR_Position = REAR;
+
+            if (FRONT_Position == -1)
             {
                 cout << "Queue is Empty\n";
                 return;
@@ -84,31 +87,31 @@ public:
             cout << "\nElement in queue are...\n";
 
             //jika FRONT <= REAR, Iterasi dari FRONT hingga REAR
-            if (FRONT <= REAR)
+            if (FRONT_Position <= REAR_Position)
             {
-                while (FRONT <= REAR)
+                while (FRONT_Position <= REAR_Position)
                 {
-                    cout << queue_array[FRONT] << " ";
-                    FRONT++;
+                    cout << queue_array[FRONT_Position] << " ";
+                    FRONT_Position++;
                 }
                 cout << endl;
             }
             else
             {
                 //jika FRONT > REAR, iterasi dari FRONT hingga akhir array
-                while (FRONT <= max - 1)
+                while (FRONT_Position <= max - 1)
                 {
-                    cout << queue_array[FRONT] << " ";
-                    FRONT++;
+                    cout << queue_array[FRONT_Position] << " ";
+                    FRONT_Position++;
                 }
 
-                FRONT = 0;
+                FRONT_Position = 0;
 
                 //iterasi dari awal array hingga REAR
-                while (FRONT <= REAR)
+                while (FRONT_Position <= REAR_Position)
                 {
-                    cout << queue_array[FRONT] << " ";
-                    FRONT++;
+                    cout << queue_array[FRONT_Position] << " ";
+                    FRONT_Position++;
                 }
                 cout << endl;
             }
@@ -135,7 +138,30 @@ int main(){
             cout << "enter your choice(1-4-): " << endl;
             cin >> ch;
             cout << endl;
+
+            //kondisi yang terjadi sesuai nilai input ch
+            switch (ch)
+            {
+            case 1 :
+                q.insert();
+                break;
+            case 2 :
+                q.remove();
+                break;
+            case 3 :
+                q.display();
+                break;
+            case 4 :
+                return 0;
+            default:
+                cout << "Invalid option!" << endl;
+                break;
+            }
+        }
+        catch (exception& e){
+            cout << "Error!" << endl;
         }
     }
+    
 
 }
