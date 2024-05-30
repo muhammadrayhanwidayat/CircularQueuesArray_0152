@@ -72,15 +72,16 @@ public:
                 FRONT = FRONT + 1;
             }
         }
-        void display() {
-
-        // cek apakah antrian kosong
-        if (FRONT == -1) {
-            cout << "Queue is empty\n";
-            return;
-        }
-
     }
+        //membuat prosedur diplay untuk menampilkan element queue
+        void display() {
+            //cek apakah antrian kosong 
+            if (FRONT == -1)
+            {
+                cout << "Queue is Empty\n";
+                return;
+            }
+        }
 };
 
 
