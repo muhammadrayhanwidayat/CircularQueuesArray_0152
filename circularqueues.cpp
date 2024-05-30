@@ -116,7 +116,26 @@ public:
 };
 
 
-
 int main(){
+    //deklarasi objek q dan variabel ch
+    Queues q;
+    char ch;
+
+    //membuat perulangan while untuk menjalankan program queue
+    while (true)
+    {
+        try
+        {
+            //membuat menu queue
+            cout << "Menu" << endl;
+            cout << "1. Implementasi insert operation" << endl;
+            cout << "2. Implementasi delete operation" << endl;
+            cout << "3. Display values" << endl;
+            cout << "4. Exit" << endl;
+            cout << "enter your choice(1-4-): " << endl;
+            cin >> ch;
+            cout << endl;
+        }
+    }
 
 }
