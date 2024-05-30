@@ -60,6 +60,18 @@ public:
             FRONT = -1;
             REAR = -1;
         }
+        else
+        {
+            //jika posisi element yang di hapus berada di posisi terakhir array, kembali ke awal array
+            if (FRONT == max -1)
+            {
+                FRONT = 0;
+            }
+            else //jika tidak increment FRONT + 1
+            {
+                FRONT = FRONT + 1;
+            }
+        }
 
     }
 };
