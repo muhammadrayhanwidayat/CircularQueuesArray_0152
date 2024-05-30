@@ -3,7 +3,7 @@ using namespace std;
 
 class Queues {
 	int FRONT, REAR, max = 5;
-	int quees_array[5];
+	int queue_array[5];
 
 public:
 	Queues() {
@@ -29,14 +29,21 @@ public:
             FRONT = 0;
             REAR = 0;
         }
-        else
+         else
         {
             //jika REAR berada di posisi terakhir array, kembali ke awal array
             if (REAR = max - 1)
-            {
+            
                 REAR = 0;
-            }
-	}
+            
+            else
+            
+                REAR = REAR + 1;
+            
+        }
+        //memasukkan nilai ke array index ke REAR
+        queue_array[REAR] = num;
+    }
 
 
 
