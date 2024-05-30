@@ -110,6 +110,7 @@ public:
                     cout << queue_array[FRONT] << " ";
                     FRONT++;
                 }
+                cout << endl;
             }
         }
 };
